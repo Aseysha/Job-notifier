@@ -2,7 +2,23 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-
 @app.get("/")
 def health():
     return {"health": "OK"}
+
+@app.get("/job")
+def getJobs():
+    return[{
+        "id": "css_123",
+        "title": "Web Developer",
+        "description": "A web developer make and maintain websites." +
+        "They are in charge of a site's overall look and feel. Web develoWeb developers also handle the technical aspects of a website. ",
+    },
+    {
+        "id": "css_456",
+        "title": "Cloud Engineer",
+        "description": "description" " Primary responsibilities include developing and implementing policies for the use of cloud services," + 
+        " managing requests for new technology, establishing a secure cloud environment, and ensuring appropriate availability of services," + 
+        " also known as uptime."
+    }]
+
